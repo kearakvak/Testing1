@@ -10,10 +10,19 @@ class Testing12_Sliver extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          leading: Icon(Icons.menu),
-          title: Text(' S L I V E R A P P B A R'),
-          expandedHeight: 300,
-        ),
+            backgroundColor: Colors.green[200],
+            leading: Icon(Icons.menu),
+            // title: Text(' S L I V E R A P P B A R'),
+            expandedHeight: 200,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset(
+                'assets/images/download.jfif',
+                fit: BoxFit.fill,
+              ),
+              title: Text(' S L I V E R A P P B A R'),
+            )),
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.all(20),
